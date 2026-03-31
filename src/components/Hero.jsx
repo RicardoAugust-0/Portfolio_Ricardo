@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
+import perfil from "../assets/perfil.jpg";
 
 export const CustomGithub = (props) => (
   <svg
@@ -163,7 +164,7 @@ export function Hero() {
         <div className="relative w-full h-full rounded-4xl md:rounded-[3rem] overflow-hidden border-4 border-background shadow-2xl bg-card transform transition-transform duration-500 hover:rotate-2 hover:scale-[1.02]">
           <div className="w-full h-full bg-muted">
             <img
-              src="src/assets/perfil.jpg"
+              src={perfil}
               alt="Foto do Ricardo"
               className="w-full h-full object-cover"
             />
