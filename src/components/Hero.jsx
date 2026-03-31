@@ -95,9 +95,12 @@ export function Hero() {
         <div className="absolute inset-0 rounded-full bg-linear-to-tr from-primary to-primary/20 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-700"></div>
         <div className="relative w-full h-full rounded-4xl md:rounded-[3rem] overflow-hidden border-4 border-background shadow-2xl bg-card transform transition-transform duration-500 hover:rotate-2 hover:scale-[1.02]">
           {/* Avatar Placeholder: Mude para a sua foto em src/assets/ e substitua o src aqui */}
-          <div className="w-full h-full flex flex-col items-center justify-center bg-muted text-muted-foreground gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary/80">Sua Foto Aqui</span>
+          <div className="w-full h-full bg-muted">
+            <img 
+              src="src/assets/perfil.jpg" 
+              alt="Foto do Ricardo" 
+              className="w-full h-full object-cover" 
+            />
           </div>
         </div>
       </motion.div>
