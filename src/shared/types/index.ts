@@ -51,3 +51,22 @@ export interface SocialLink {
   icon: string;
   label: string;
 }
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  description: string;
+  validUntil?: string;
+  credentialUrl?: string;
+  icon: string;
+  color: 'blue' | 'purple' | 'cyan' | 'green' | 'orange';
+}
+
+export interface Stat {
+  id: string;
+  label: string;
+  value: number | string;
+  icon: string;
+  suffix?: string;
+}

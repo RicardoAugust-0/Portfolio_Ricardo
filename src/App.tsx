@@ -1,7 +1,9 @@
 import { Terminal } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Hero } from './features/hero/components/Hero';
+import { Stats } from './features/stats/components/Stats';
 import { Projects } from './features/projects/components/Projects';
+import { Certifications } from './features/certifications/components/Certifications';
 import { Experience } from './features/experience/components/Experience';
 import { Skills } from './features/skills/components/Skills';
 import { Education } from './features/education/components/Education';
@@ -65,8 +67,11 @@ function AppContent() {
       <main className="max-w-4xl mx-auto px-6 py-6 md:py-12 space-y-16">
         <Hero />
 
+        <Stats />
+
         <div className="space-y-28 md:space-y-36">
           <Projects />
+          <Certifications />
           <Experience />
           <Skills />
           <Education />

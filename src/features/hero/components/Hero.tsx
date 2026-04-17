@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Download, MapPin } from 'lucide-react';
 import { Button } from '../../../shared/components/ui/button';
 import perfil from '../../../assets/perfil.jpg';
+import cv from '../../../assets/Currículo_2026_Ricardo.pdf';
 import { SocialLinks } from './SocialLinks';
 
 const containerVars = {
@@ -25,8 +26,13 @@ const itemVars = {
 };
 
 export function Hero() {
-  const handlePrintCV = () => {
-    window.print();
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = cv;
+    link.download = 'Ricardo_Augusto_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -60,7 +66,7 @@ export function Hero() {
 
         <motion.div variants={itemVars} className="flex flex-wrap items-center gap-4 pt-2">
           <Button
-            onClick={handlePrintCV}
+            onClick={handleDownloadCV}
             className="print:hidden shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all rounded-full px-6 h-12 text-md"
           >
             <Download className="mr-2 h-4 w-4" />
