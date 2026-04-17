@@ -29,47 +29,53 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #0f172a;
-    
+    /* Light Mode - Neutral Base */
+    --background: #fafafa;
+    --foreground: #09090b;
+
     --card: #ffffff;
-    --card-foreground: #0f172a;
+    --card-foreground: #09090b;
 
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
 
-    --border: #e2e8f0;
-    --input: #e2e8f0;
-    --ring: #0f172a;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #7c3aed;
 
-    --primary: #3b82f6;
+    /* Violet Primary */
+    --primary: #7c3aed;
     --primary-foreground: #ffffff;
 
-    --secondary: #f1f5f9;
-    --secondary-foreground: #0f172a;
+    /* Zinc Secondary */
+    --secondary: #f4f4f5;
+    --secondary-foreground: #09090b;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: #020617;
-    --foreground: #f8fafc;
-    
-    --card: #0b1120;
-    --card-foreground: #f8fafc;
+    /* Dark Mode - Premium Zinc Base */
+    --background: #09090b;
+    --foreground: #fafafa;
 
-    --muted: #0f172a;
-    --muted-foreground: #94a3b8;
+    --card: #18181b;
+    --card-foreground: #fafafa;
 
-    --border: #1e293b;
-    --input: #1e293b;
-    --ring: #cbd5e1;
+    --muted: #27272a;
+    --muted-foreground: #a1a1a5;
 
-    --primary: #60a5fa;
-    --primary-foreground: #0f172a;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #a855f7;
 
-    --secondary: #0f172a;
-    --secondary-foreground: #f8fafc;
+    /* Violet Primary - Lighter in Dark Mode */
+    --primary: #a855f7;
+    --primary-foreground: #09090b;
+
+    /* Zinc Secondary - Darker in Dark Mode */
+    --secondary: #27272a;
+    --secondary-foreground: #fafafa;
   }
 }
 
@@ -81,5 +87,51 @@
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
+  }
+}
+
+/* Premium Dark Mode Enhancements */
+@layer base {
+  .dark {
+    color-scheme: dark;
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-premium {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%);
+  }
+
+  .gradient-subtle {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
+  }
+
+  /* Selection Style */
+  ::-moz-selection {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--muted-foreground);
   }
 }
